@@ -4,8 +4,8 @@ error_reporting(1);
 ini_set('display_errors', 1);
 date_default_timezone_set('Asia/Tehran');
 
-const API_KEY = '';
-const BOT_ID  = ;
+const API_KEY = '1010361809:u9favCTJqt5zgmHkMAhO2sBJYqMUcsMkCCiycx1D';
+const BOT_ID  = 1010361809;
 
 $hostName = 'localhost';
 $userName = '';
