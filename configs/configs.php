@@ -8,9 +8,9 @@ const API_KEY = '1010361809:u9favCTJqt5zgmHkMAhO2sBJYqMUcsMkCCiycx1D';
 const BOT_ID  = 1010361809;
 
 $hostName = 'localhost';
-$userName = '';
-$password = '';
-$dbName   = '';
+$userName = 'root';
+$password = 'Pars2500';
+$dbName   = 'iranzobodb';
 
 try {
     $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8mb4 COLLATE utf8mb4_general_ci"];
