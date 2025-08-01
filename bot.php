@@ -1,25 +1,9 @@
 <?php
 
-$bale_ip_ranges = [
-    ['lower' => '185.136.96.111', 'upper' => '185.136.99.111'],
-    ['lower' => '185.88.153.138', 'upper' => '185.88.153.138'],
-    ['lower' => '2.189.68.126', 'upper' => '2.189.68.126'],
-];
+// چک IP غیرفعال شده
+$ok = true;
 
-$ip_dec = (float) sprintf("%u", ip2long($_SERVER['REMOTE_ADDR']));
-$ok = false;
-
-foreach ($bale_ip_ranges as $bale_ip_range) {
-    $lower_dec = (float) sprintf("%u", ip2long($bale_ip_range['lower']));
-    $upper_dec = (float) sprintf("%u", ip2long($bale_ip_range['upper']));
-    if ($ip_dec >= $lower_dec && $ip_dec <= $upper_dec) {
-        $ok = true;
-        break;
-    }
-}
-
-if (!$ok) die("Access denied.");
-
+// ادامه کدها
 include 'configs/configs.php';
 include 'configs/keyboards.php';
 include 'libs/jdf.php';
@@ -95,7 +79,6 @@ include "commands/last_transactions.php";
 include "commands/withdrawal.php";
 include "commands/other_command.php";
 include "commands/invite_users.php";
-
 
 include "admin/amdin_login.php";
 include "admin/admin_setChannels.php";
